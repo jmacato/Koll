@@ -4,9 +4,32 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Koll"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
+       
+        AllowsTransparency="True" Background="Transparent" mc:Ignorable="d" WindowStyle="None" WindowStartupLocation="CenterOwner" WindowState="Maximized"
+        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
+    <Grid Background="Transparent">
+        <Grid.Effect>
+            <DropShadowEffect BlurRadius="10" Color="Black" ShadowDepth="3" Opacity="0.5"/>
+        </Grid.Effect>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+
+
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="2" Margin="9pt">
+            <Label x:Name="TimeLabel"
+                   FontSize="120pt"
+                   FontWeight="Light"
+                   Foreground="White"
+                   HorizontalAlignment="Right" 
+                   VerticalAlignment="Top"></Label>
+
+        </Grid>
+        
+        
         
     </Grid>
 </Window>
